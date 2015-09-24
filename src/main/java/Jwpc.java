@@ -20,7 +20,7 @@ public class Jwpc
         imageUrl = "/servlet/GenImg";
         loginUrl = "/servlet/login";
         imagePath = "./image";
-        imageName = "yzm.png";
+        imageName = "yzm.jpeg";
         checkAndCreatePath();
     }
 
@@ -61,18 +61,7 @@ public class Jwpc
         }
         if (request.ok())
         {
-            String imageContent = request.body();
-            try
-            {
-                FileWriter fw = new FileWriter(file);
-                fw.write(imageContent);
-                fw.close();
-            }
-            catch (IOException exception)
-            {
-                exception.printStackTrace();
-                return false;
-            }
+            request.receive(file);
             return true;
         }
         else
