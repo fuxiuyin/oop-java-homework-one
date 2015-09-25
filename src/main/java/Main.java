@@ -9,8 +9,7 @@ public class Main
     {
         System.out.println("Hello World!");
         Jwpc jwpc = new Jwpc();
-        jwpc.test();
-
+        jwpc.getClasses();
     }
 
 
