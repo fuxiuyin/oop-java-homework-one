@@ -56,17 +56,15 @@ public class Jwpc
     public boolean login()
     {
         Scanner in = new Scanner(new BufferedInputStream(System.in));
-//        System.out.println("请输入学号:");
-//        userId = in.next();
-        userId = "2013302580159";
-        userPwd = "690911sKy";
+        System.out.println("请输入学号:");
+        userId = in.next();
         while(userId.length() == 13 && !isDigit(userId))
         {
             System.out.println("输入的学号格式不正确,请重新输入入学号");
             userId = in.next();
         }
-//        System.out.println("请输入密码:");
-//        userPwd = in.next();
+        System.out.println("请输入密码:");
+        userPwd = in.next();
         while(userPwd.isEmpty())
         {
             System.out.println("输入的密码为空,请重新输入密码");
