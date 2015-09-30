@@ -16,9 +16,3 @@
 用的是Map<String, String>来存储,比较简单,也没有考虑cookie里面path的问题
 没精力考虑那么多了.方法只封装了post和get,其中post还必须带data,反正是自用的,
 如果有空肯定是想弄成requests那样,用了那么多网络库,感觉requests才是给人用的.
-
-# 关于score.html文件编码问题
-----------------------
-从教务下下来的应该是gb2312的,但是HttpRequest这个自动编码成unicode了,所以
-写文件的时候编码是utf-8.但是html文件的head里面制定的编码是gb2312,所以打开是
-乱码,于是我就手动把score.html文件里面的head制定的编码换成了utf-8.
